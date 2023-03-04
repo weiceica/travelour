@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* custom utility classes for tailwind */
+@layer components {
+    .infoText{
+        @apply p-4 bg-[#3f4d38] rounded-lg max-w-[350px]
+    }
+
+    .chatRow{
+        @apply rounded-lg px-5 py-3 text-sm flex items-center justify-center space-x-2 hover:bg-[#363e32]  cursor-pointer text-[#71905f] hover:text-white transition-all duration-200 ease-out font-bold border-l-8
+    }
+}
