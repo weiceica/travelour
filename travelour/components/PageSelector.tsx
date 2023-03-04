@@ -13,15 +13,15 @@ function PageSelector() {
       </div>
       <div className="text-white p-3">
         {/* Home Page (Chatter) */}
-        <a href="/"><BookOpenIcon className="h-16 w-16 text-white hover:text-[#383F34]"/></a>
+        <a href="/agenda"><BookOpenIcon className="h-16 w-16 text-white hover:text-[#383F34]"/></a>
       </div>
       <div className="text-white p-3">
         {/* travel news */}
-        <a href="/"><NewspaperIcon className="h-16 w-16 text-white hover:text-[#383F34]"/></a>
+        <a href="/news"><NewspaperIcon className="h-16 w-16 text-white hover:text-[#383F34]"/></a>
       </div>
       <div className="text-white p-3 mb-3">
         {/* About */}
-        <a href="/"><InformationCircleIcon className="h-16 w-16 text-white hover:text-[#383F34]"/></a>
+        <a href="/info"><InformationCircleIcon className="h-16 w-16 text-white hover:text-[#383F34]"/></a>
       </div>
       {session && (
         <img 
