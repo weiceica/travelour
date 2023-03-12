@@ -13,9 +13,9 @@ function HomePage() {
                     <h2>Examples</h2>
                 </div>
                 <div className="space-y-3">
-                    <p className="infoText">"Where should I travel to in August?"</p>
-                    <p className="infoText">"What are the hotel prices for St Lucia on December 6th?"</p>
-                    <p className="infoText">"Plan me a 4 day road trip around Alaska to see the Northern lights"</p>
+                    <p className="infoText hover:animate-bounce">"Where should I travel to in August?"</p>
+                    <p className="infoText hover:animate-bounce">"What are the hotel prices for St Lucia on December 6th?"</p>
+                    <p className="infoText hover:animate-bounce">"Plan me a 4 day road trip around Alaska to see the Northern lights"</p>
 
                 </div>
             </div>
@@ -26,9 +26,9 @@ function HomePage() {
                     <h2>Capabilities</h2>
                 </div>
                 <div className="space-y-3">
-                    <p className="infoText">Hotel prices + transportation planning</p>
-                    <p className="infoText">Developing an iternary given a specific set of dates and instructions</p>
-                    <p className="infoText">Planning different kinds of trips and revising various itenaries</p>
+                    <p className="infoText hover:animate-bounce">Hotel prices + transportation planning</p>
+                    <p className="infoText hover:animate-bounce">Developing an iternary given a specific set of dates and instructions</p>
+                    <p className="infoText hover:animate-bounce">Planning different kinds of trips and revising various itenaries</p>
 
                 </div>
             </div>
@@ -39,9 +39,9 @@ function HomePage() {
                     <h2>Limitations</h2>
                 </div>
                 <div className="space-y-3">
-                    <p className="infoText">Don't input "Add XXX to my travel planner"</p>
-                    <p className="infoText">No harmful or disrespectful slangs (these would be reported)</p>
-                    <p className="infoText">Don't input "Pay for my trip via a credit cards"</p>
+                    <p className="infoText hover:animate-bounce">Don't input "Add XXX to my travel planner"</p>
+                    <p className="infoText hover:animate-bounce">No harmful or disrespectful slangs (these would be reported)</p>
+                    <p className="infoText hover:animate-bounce">Don't input "Pay for my trip via a credit cards"</p>
 
                 </div>
             </div>
