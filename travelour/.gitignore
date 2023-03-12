@@ -35,5 +35,5 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 serviceAccountKey.json
-
+trvelour-firebase-adminsdk-j4lz9-039790de95.json
 firebase.ts
