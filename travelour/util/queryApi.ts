@@ -2,7 +2,7 @@ import openai from "./chatgpt";
 
 const query = async(prompt:string, chatId:string, model:string) => {
     // build my prompt up using contextual chat later...
-
+    
     model = "text-davinci-003";
     const res = await openai.createCompletion({
         model, prompt, max_tokens: 1000, temperature: 1.0, top_p: 1,
