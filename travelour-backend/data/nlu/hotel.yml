@@ -1,0 +1,655 @@
+version: "3.1"
+nlu:
+- intent: hotel-inform
+  examples: |
+    - am looking for a place to to stay that has [cheap](price) price range it should be in a type of [hotel](type)
+    - i need to book a hotel in the [east](area) that has [4](stars) stars
+    - hi im looking for a hotel in the [east](area) the internet is not needed
+    - no but it should have free parking please
+    - is that a [guesthouse](type) or a hotel id really prefer a [guesthouse](type)
+    - okay none of them dont offer free wifi if not ill need the address for one that does have wifi please tell me about your favorite
+    - great thanks im also looking for a [4](stars) star hotel in the [north](area) can you please help with that
+    - please book the hotel for [4](people) people and [2](stay) nights thank you
+    - the same day[monday](day) please
+    - i am looking for information about the [city centre north b and b](name) hotel can you help me with that
+    - i need a [cheap](price) hotel with free parking
+    - i would prefer the hotel be in the [north](area) part of town
+    - i will go ahead an book at the [worth house](name)
+    - [1](people) person [5](stay) nights please
+    - i need reservations for [2](people)
+    - im looking for a [2](stars) star [hotel](type) with free wifi
+    - the area doesnt matter i would like an [expensive](price) [hotel](type) if you can find one
+    - [5](stay) nights please and i would need the reference number also
+    - thanks im going to hanging out at the college late tonight could you get me a taxi back to the [hotel](type) at 2:45
+    - i need a hotel in the [same price]{"entity": "price", "value": "expensive"} range as the restaurant that has free parking and free wifi for the same group for [3](stay) nights starting from the same day
+    - if you can book it for my group i need it for [3](stay) nights starting on [wednesday](day)
+    - no particular price range but i would like it to be a [4](stars) star hotel
+    - i am looking for a specific hotel its name is [express by holiday inn cambridge](name)
+    - yes could you book the hotel room for me for [7](people) people
+    - [monday](day) please there will be [7](people) of us and wed like to stay for [4](stay) days
+    - yes i need a hotel as well
+    - whoa whoa easy there tiger lets narrow the search down first in the center [0](stars) stars [cheap](price) and it can be a hotel or guesthouse
+    - is [el shaddai](name) a guest house or hotel
+    - thanks would you be able to help me find a place to stay in the [east](area) side of town
+    - that doesnt matter i would like a [4](stars) star hotel though please
+    - no sorry im looking for a hotel in the [centre](area) not north
+    - i want [kirkwood house](name) i dont need a booking just the postcode
+    - i am looking for a particular hotel its name is called [autumn house](name)
+    - no thanks would you book the [autumn house](name) for me starting on monday please
+    - thats for [8](people) people and its for [2](stay) nights
+    - could you try [wednesday](day) instead
+    - hello i am looking for a hotel in the [south](area) that is [moderately]{"entity": "price", "value": "moderate"} priced
+    - id prefer a hotel it should have a [4](stars) star rating can you check again please
+    - okay do you have any hotels with a [3](stars) star rating instead
+    - i guess thats fine book it for [6](people) people for [2](stay) nights well be there on [thursday](day)
+    - im looking for a [hotel](type) to stay at in the [centre](area) can you look this up for me
+    - not in terms of that but do they have free parking and have a [3](stars) star rating
+    - okay id like to book a room at the gonville [hotel](type) for [4](stay) nights there will be [6](people) people and we will be arriving on [saturday](day)
+    - yes what about [2](stay) nights instead of 4
+    - yes please i also need a hotel with at least [3](stars) stars and free parking
+    - how about a [guesthouse](type) in [south](area) side instead
+    - sure what about in the city [centre](area)
+    - okay can you try booking the [el shaddai](name) for me fo [saturday](day) for [2](people) people for [3](stay) nights
+    - im looking for a hotel called the [leverton house](name) can you help me find it
+    - yes i would like to book it for [four]{"entity": "stay", "value": "4"} nights starting sunday five people
+    - hi im looking for lodging in cambridge that includes free wifi and is upscale and [expensive](price)
+    - i actually am looking for a [guesthouse](type) not a hotel
+    - i need it in the [east](area) please
+    - yes i need 3 rooms beginning on tuesday for [2](stay) nights
+    - there are [3](people) of us
+    - hello i am looking for a [four]{"entity": "stars", "value": "4"} star hotel on the [north](area) side
+    - not really and im not really concerned with wifi either which one do you recommend
+    - what is the hotels rating
+    - actually could you double check whether the acorn has free wifi
+    - yes please do ill be arriving thursday theyll be 6 of us and wed like to stay for [4](stay) nights
+    - could you help me find [the cambridge belfry](name)
+    - i would like to check in on [saturday](day) for [2](stay) nights there will be [4](people) of us
+    - im also looking for a place to stay ideally a [hotel](type) with free wifi and parking that is also [expensive](price)
+    - great can you book it for [one]{"entity": "people", "value": "1"} person for [4](stay) nights starting [friday](day)
+    - i would like a hotel with [4stars]{"entity": "stars", "value": "4"} also an [expensive](price) one
+    - thanks so much can you also help me find a [guesthouse](type) that is [moderately]{"entity": "price", "value": "moderate"} priced to stay at
+    - that sounds just fine so long as it is rated [3](stars) stars
+    - yes surprise me with the hotel as long as its a [3](stars) star [guesthouse](type) in the [moderate](price) price range book for [2](stay) people and [2](stay) nights starting from [saturday](day)
+    - i need the address and entrance fee as well also can you help me find a hotel with free parking in the [moderate](price) price range
+    - im not concerned about the area but id like it to include free parking and wifi and have a [3](stars) star rating please
+    - i looking for information about a hotel in the [moderate](price) price range that includes free wifi
+    - what is the star rating of the [acorn guest house](name)
+    - sorry the hotel im looking for also needs to be in the [south](area) area and have a [4](stars) star rating could you suggest anything that fills those requirements too
+    - [4](people) people for [2](stay) nights starting [sunday](day) please
+    - yes that train sounds good please book it for me could you also find me a hotel with a [moderate](price) price that offers internet
+    - the [north](area) part of town please preferably in a [guesthouse](type)
+    - yes please i would like to book it for [7](people) people for [5](stay) nights on [saturday](day) and i need a reference number
+    - yes please try to book it for [four]{"entity": "stay", "value": "4"} nights instead
+    - hello i am trying to find a place to stay that has free wifi and [3](stars) stars do you have anything like that
+    - are any of them a [hotel](type) i dont want a guesthouse
+    - no preference i need it for [2](stay) nights starting from [monday](day) for [3](people) people and i need a reference number please
+    - i be traveling to cambridge and cant wait to try the restaurants but could you help me with a finding a [hotel](type)
+    - i would prefer a [hotel](type) type [hotel](type) it just needs to be in the [moderate](price) price range and doesnt need to have free parking but needs wifi
+    - yes can you tell me the star rating of that [hotel](type)
+    - thanks i also need a restaurant in the [centre](area) that serves [european](food) food it needs to be in the [same price]{"entity": "price", "value": "moderate"} range as [hotel](type)
+    - from the [hotel](type) i would like to get a contact number for the taxi also just in case something changes
+    - great i also need a place to stay that is a [guesthouse](type) that includes free parking
+    - any location is fine but i would prefer something that is in the [expensive](price) price range
+    - okay i guess itll save me some dough if i try for a place thats more [moderately]{"entity": "price", "value": "moderate"} priced
+    - i am looking for a hotel call [arbury lodge guesthouse](name)
+    - i would like to book it for [4](stay) nights for [4](stay) people please
+    - i want to check in on [tuesday](day)
+    - get me a phone number for one that is close to the hotel and is free
+    - i will need to be picked up at the hotel by [4:45]{"entity": "leave", "value": "04:45"} to arrive at the college on [tuesday](day)
+    - thank you i also need a place to stay that is a [guesthouse](type) with free parking
+    - i dont have a preference for area i would just like it to have [4](stars) stars and a [moderate](price) cost with free parking
+    - i need a place to stay in [south](area) of town
+    - it doesnt matter on the pricing or about having free parking i would like the hotel to be like a [guesthouse](type)
+    - thank you are there any cheap restaurants near the hotel as well
+    - i am staying in cambridge soon and would like to stay at [a and b guest house](name)
+    - we are staying [6](people) people for [4](stay) nights starting from [tuesday](day) i need the reference number
+    - im looking for a [guesthouse](type) in the [centre](area) of town can you find one for me
+    - how many stars does [el shaddai](name) have im looking for a place that is at least a [3](stars) star location
+    - its really important to me to have [3](stars) stars no more no less are there any [hotels]{"entity": "type", "value": "hotel"} that match that description
+    - that will work can you make a reservation for [8](people) people please
+    - starting [sunday](day) and for [3](stay) nights please
+    - for [8](people) people please can i also get the reference number
+    - yes could you book a taxi for me id like to leave the [gonville hotel](depart) by [24:00](leave) going to [all saints church](dest)
+    - yes im looking for a particular hotel the name is [home from home](name)
+    - im looking for a hotel called a and b quest house
+    - i need a room for [1](people) person for [5](stay) nights beginning on [saturday](day) i will also need the reference number
+    - can you tell me about the [city centre north b and b](name) hotel
+    - yes please we will be arriving on [sunday](day) for [3](stay) nights there are [7](people) of us
+    - im looking for information on a hotel called [the lensfield hotel](name)
+    - ummmcan you book that for me or do i have to call the hotel myself
+    - i need to stay for [5](stay) nights well be arriving on monday
+    - lensfield sounds perfect i will need [5](stay) nights please
+    - [3](people) for [5](stay) nights starting [wednesday](day) and i need the reference then too please
+    - the hotel to the restaurant please
+    - i need a hotel close to downtown cambridge please
+    - i would like a [hotel](type) please
+    - i need it booked for [3](people) people for [5](stay) nights starting from [friday](day)
+    - yes please im also looking for a hotel in the [west](area) i need free parking and wifi available thanks so much
+    - a [3](stars) star hotel in the [cheap](price) price range
+    - we need to find a [guesthouse](type) of [moderate](price) price
+    - i would like it to have a [3](stars) star rating
+    - [four]{"entity": "people", "value": "4"} [two]{"entity": "stay", "value": "2"} nights beginning [saturday](day)
+    - how about [1](stay) night would that work
+    - hi i will be attending a conference in the [eastern]{"entity": "area", "value": "east"} part of town and wondered if you could help me find an available room
+    - i prefer a [guesthouse](type) do you have any [expensive](price) ones
+    - how about a hotel in the [cheap](price) price range
+    - i dont need a room right now but does the [allenbell](name) have free wifi and whats their postcode
+    - im looking for a hotel in the [south](area)
+    - i am looking for a hotel with free wifi it should be in the [cheap](price) price range like a [guesthouse](type)
+    - yes please i would like it for [8](people) people for [5](stay) nights starting from monday
+    - hello i am looking for a [guesthouse](type) that includes free parking
+    - [cheap](price) price and [north](area) part of town
+    - lets make a booking for [6](people) people [5](stay) nights starting [wednesday](day)
+    - thanks i also need a [4star]{"entity": "stars", "value": "4"} place to stay that has free parking
+    - on second thought im actually looking for a hotel same criteria but it needs to be in the [moderate](price) price range
+    - hi i am looking for some info on the [worth house](name) hotel
+    - okay great can you book me a room for [7](people) people and [3](stay) nights starting from [saturday](day)
+    - yes do you have a different cheap hotel available
+    - just please can you find a place in the [same price]{"entity": "price", "value": "cheap"} range ill need a reference number please
+    - good afternoon can you help me find an [expensive](price) place to stay in the town [centre](area)
+    - it should be a [hotel](type) type [hotel](type) not a guesthouse
+    - yes that sounds good could you reserve a room for [5](people) people checking in on [saturday](day) i think well stay for [3](stay) nights
+    - i am looking for a [guesthouse](type) to stay at with free wifi please
+    - no preference on the area or price range but the hotel should have [4](stars) stars
+    - i dont care about the price range either as long as it is a [4](stars) star guesthouse with free wifi
+    - no it will be for [2](people) people for [5](stay) nights
+    - im looking for some [moderately]{"entity": "price", "value": "moderate"} priced accommodations for my visit can you help me with that
+    - no but id like to stay in a [4](stars) star hotel that offers free parking
+    - im sorry i actually prefer a hotel rather than a guest house are there any moderately priced [4](stars) star hotels
+    - are there any [cheap](price) [hotels]{"entity": "type", "value": "hotel"}
+    - it [doesnt matter]{"entity": "area", "value": "do nt care"} i just want it to be a [cheap](price) [guesthouse](type) with wifi included
+    - i also need a [cheap](price) [hotel](type)
+    - i would like to stay in the [north](area) please
+    - um i would prefer a [hotel](type) rather than a guesthouse how about the [moderate](price) price range
+    - yes i would for [5](people) people please for [2](stay) nights starting on [thursday](day)
+    - yes i am looking for a hotel named [el shaddai](name)
+    - im looking for [rosas bed and breakfast](name) in cambridge
+    - yes please for [5](stay) nights starting [sunday](day) there will be [8](people) people in my party
+    - thanks im also looking for an [expensive](price) [hotel](type) can you help
+    - yes it should have free wifi
+    - that isnt really important for me please recommend one and book it for six people
+    - starting [saturday](day) i need [5](stay) nights for [6](people) people by the way
+    - im going to need a taxi at the [hotel](type) first ill be leaving the [hotel](type) at [19:45](leave)
+    - i would like a hotel in the [north](area) that has free parking it doesnt need to have internet
+    - a four star rating with a price range in the neighborhhood of 1000 pounds please i would like to be in the london england area if i may to be near the clubs
+    - just as long as it is located in the [south](area)
+    - either one works i need to book for [6](people) people for [5](stay) nights starting on [monday](day) ill also need a reference number
+    - can you also help me find a hotel called the [acorn guest house](name)
+    - thank you id like to book a room starting on [sunday](day) ill need it for [5](stay) nights and [6](people) people
+    - thanks i am also needing to book at a guesthouse for 6 for [5](stay) nights starting on sunday
+    - hello i would like to find a hotel that includes free parking
+    - yes the [centre](area) would be nice and also free wifi
+    - please book me some rooms for the university arms to accommodate [8](people) people for [3](stay) nights starting on [wednesday](day) can you also provide me the reference number after you book
+    - i am looking for a hotel by the name of [home from home](name)
+    - please make a booking for [eight]{"entity": "stay", "value": "8"} people staying for [4](people) nights from [saturday](day)
+    - actually yes i will be needing somewhere to stay too please a [3](stars) star [hotel](type) in the [[same]{"entity": "area", "value": "south"} area and price](price:[expensive](price)) range as my restaurant
+    - yes please [two]{"entity": "people", "value": "2"} people for [two]{"entity": "stay", "value": "2"} nights on [sunday](day)
+    - i am looking for a [3](stars) star [expensive](price) place to stay in cambridge
+    - im also looking for places to that are near the hotel
+    - i forgot to ask does the [gonville hotel](name) include free wifi and is it in the [centre](area)
+    - actually im looking for an attraction in the area of the hotel
+    - im looking for a [hotel](type) in the [east](area) and id like free wifi please
+    - does that hotel include free parking and have [2](stars) stars
+    - thank you and i am also looking for the [alexander bed and breakfast](name)
+    - yes id like to book for [4](people) people for [2](stay) nights starting [friday](day)
+    - i am looking for a place to stay the [hotel](type) should include free wifi and should be in the [cheap](price) price range
+    - okay i need to book it for [1](people) person [2](stay) nights starting [friday](day)
+    - how about for [1](stay) night
+    - i need lodgings and id like to stay in an [expensive](price) [guesthouse](type)
+    - i would like a [4](stars) star hotel in an expensive [guesthouse](type) please thanks
+    - what about a [moderate](price) priced one instead
+    - well need it for the same day [wednesday](day) for the same [3](people) people wed like to stay for [5](stay) nights
+    - ok well how about [3](stay) nights instead
+    - i also need a hotel called lovell lodege
+    - i need a [hotel](type) in the [west](area) free parking is not necessary but it should be rated [4](stars) stars
+    - also i need a [hotel](type) with parking and [2](stars) stars
+    - ok tell me about the ones to the [north](area) i need one thats a regular [hotel](type) and not a guesthouse
+    - no please book one of them for me for [4](people) people staying [2](stay) nights starting [tuesday](day) can you provide me with the reference number for that booking
+    - im looking for a [4](stars) star place to stay that has free wifi
+    - i need the place to be in the [east](area) part of town
+    - i would like it for [3](people) people [2](stay) nights starting [sunday](day) please
+    - [same area]{"entity": "area", "value": "east"} as the hotel i need a reservation for [3](people) at [17:30](time) on [sunday](day) and please provide the reference number
+    - i guess i need to book the hotel first is there a [guesthouse](type) in the [same area]{"entity": "area", "value": "centre"} as [la raza](name)
+    - does the [alexander bed and breakfast](name) also have free parking
+    - please go ahead and book the [alexander bed and breakfast](name) for me
+    - for [2](stay) on [friday](day)
+    - thank you i also would like to get a place to stay in the [south](area)
+    - the price [doesnt matter]{"entity": "price", "value": "do nt care"} it just needs to be a [hotel](type) i dont need internet
+    - hello i am wondering if you can help me with some information on a hotel called [city centre north b and b](name)
+    - the hotel booking is for [4](people) people starting [monday](day) we will stay [2](stay) nights i need the train from [norwich](depart) to arrive in [cambridge](dest) by [15:15](arrive) please provide reference numbers
+    - hello can you recommend a [0star]{"entity": "stars", "value": "0"} hotel with free wifi please
+    - great i need to book it for [4](stay) nights
+    - try [tuesday](day) please
+    - i dont really mind about price but i would like a [4](stars) star guesthouse with wifi located on the [east](area) side
+    - yes i would i need it for [3](stay) nights [3](stay) people starting on [monday](day)
+    - could you tell me about the restaurants neat the hotel
+    - i would like a [moderate](price) priced [guesthouse](type) please it also needs to have [4](stars) stars and free parking
+    - i am pretty indecisive so none can you pick a [4](stars) star place and book me for [3](stay) people and 2 nights starting on [tuesday](day)
+    - hmm not right now but i am looking for a particular hotel its called [allenbell](name) what can you tell me about that
+    - i need it for [three] [(]{"entity": "people", "value": "6"} stay:3) nights six people from [tuesday](day) on
+    - yeah try it for [1](stay) night instead of 3 please
+    - i am looking for [city centre north b and b](name)
+    - yes please book it for [1](people) person and for [5](stay) nights starting [friday](day)
+    - yes please i need a [3](stars) star [hotel](type) that offers free wifi
+    - i would like to stay in the [centre](area) of town please
+    - again [3](stars) star with free wifi i dont care about the price it has to be in the [centre](area) though
+    - i am also looking for a particular hotel named huntington marriott hotel
+    - yes i am looking for a hotel called [carolina bed and breakfast](name)
+    - yes please [2](people) people for [3](stay) nights beginning [thursday](day) get me the reference number too
+    - yes please go ahead and book that for me i am also looking for a place to stay and can you find me a guest house with free wifi
+    - actually i would prefer a guesthouse is the [north](area)
+    - okay i would like to book the [archway house](name) for [three]{"entity": "[stay", "value": "3](people:1"}) nights and for one person starting on [sunday](day) and what is the price
+    - actually im sorry would you be able to confirm that the hotel youve booked has wifi i dont have that in my notes
+    - im looking for a [hotel](type) with free parking
+    - area doesnt matter but i would like to keep the price [moderate](price)
+    - do either of them have a [4](stars) star rating
+    - i would like a [four]{"entity": "stars", "value": "4"} star hotel in the [moderate](price) price range i do need free parking
+    - great im also looking for a place to stay i need a hotel that includes free wifi and free parking
+    - do you have an [expensive](price) [guesthouse](type)
+    - how about a [cheap](price) one
+    - i would like a [four]{"entity": "stars", "value": "4"} star [hotel](type)
+    - no but i need it to have free parking and [cheap](price)
+    - im looking for a [hotel](type) type place to stay are any of those hotels
+    - i am looking for a [cheap](price) hotel with free parking near cambridge
+    - id like to stay close to the center area but the hotel should be [3](stars) star
+    - are there any [moderate](price) [3](stars) star hotels with free parking
+    - how about one in the [moderate](price) price range
+    - i would like to find some info on the [warkworth house](name) hotel
+    - i am looking to book at the warkworth hotel
+    - i need it for [4](people) people for [2](stay) nights starting [monday](day)
+    - could you provide me with the address of the [warkworth house](name)
+    - i need to know more about the [alexander bed and breakfast](name)
+    - i would like to make a booking for book it for 5 people and [3](stay) nights starting from wednesday
+    - im looking for a hotel in the [centre](area) of town
+    - which hotels are rated [4](stars) stars and offer free parking can i have a phone number for those hotels
+    - thanks im also looking to stay at a hotel called [lovell lodge](name) can you help me with that
+    - yes for [6](people) people [3](stay) nights on [saturday](day)
+    - it doesnt matter but i do prefer a [4](stars) star with free parking
+    - whats the wifi situation like at this belfry place
+    - yes make reservations for [6](people) people for [5](stay) nights
+    - arriving on [tuesday](day)
+    - thank you i am also looking for a [guesthouse](type) in the [same area]{"entity": "area", "value": "centre"} as the restaurant can you help with that too
+    - i need it to have free parking and internet
+    - ok i also want to book a taxi between the hotel and restaurant
+    - thank you i also need a taxi two commute between the hotel and restaurant
+    - i need a [cheap](price) [hotel](type) in cambridge
+    - i would like to stay in the [west](area) area
+    - does it have free wifi
+    - yes please i need it for one person on saturday a [3](stay) night stay
+    - yes i would like to book a [hotel](type) that has free wifi parking doesnt matter
+    - is [gonville hotel](name) in the town [centre](area)
+    - does the hotel have a star rating of [0](stars)
+    - i need a hotel located near the [centre](area) of town with a star of [0](stars) for [3](people) people 2 nights starting [thursday](day) please
+    - how about just [one]{"entity": "stay", "value": "1"} night
+    - yes i need to find a hotel with free parking and [4](stars) star rating
+    - yes id prefer a [hotel](type) over a guesthouse and i need to stay in the [north](area)
+    - if there is no hotel availability i will accept a [guesthouse](type) is one available
+    - how about free parking
+    - i want to book the [el shaddai](name) hotel
+    - great thanks for that im also looking for a place to stay it should be a [4](stars) star hotel but [cheap](price)
+    - i sure hope so id like to find a place to stay with [four]{"entity": "stars", "value": "4"} stars in the [north](area)
+    - price is not of any concern just so it has a [4](stars) star rating
+    - oh i think i forgot to mention that it needs to be a [4](stars) star guesthouse i want to book saturday for 7 people [2](stay) nights
+    - i also need a [hotel](type) that has free parking i dont need internet or anything like that
+    - are any of the 29 places guest houses i would actually prefer a [hotel](type) rather than a guest house
+    - i just need a [hotel](type) with free parking in any part of town perhaps you can suggest one
+    - i would like to stay in a [guesthouse](type) type of hotel that is in the [moderate](price) price range also it should have free wifi
+    - id like to book the room for [4](stay) people for [4](stay) nights starting [saturday](day) please provide me with the reference number
+    - i am also looking for a hotel called [leverton house](name) do you have any information on it
+    - yes could you book me a room for [4](stay) nights starting on [tuesday](day) there will be [5](people) of us staying there
+    - that is good i also need a place to stay with a [cheap](price) price and free parking
+    - a [guesthouse](type) in the [east](area) please
+    - i need a [4](stars) star [hotel](type)
+    - how about something in the [expensive](price) price range with free wifi
+    - book it for [7](people) people and [5](stay) nights starting from [wednesday](day)
+    - im looking for a [hotel](type) to stay at i want it to be at least [2](stay) stars and in the center of town
+    - i can afford an expensive place but if there are no rooms a [cheap](price) hotel will do as well
+    - that is fine book for [8](people) people and [5](stay) nights from [friday](day)
+    - no but i do need a taxi from the hotel to the college
+    - im looking for a [4](stars) star [hotel](type) with a [moderate](price) price
+    - how about a [guesthouse](type) in the [moderate](price) price range then
+    - [3](stay) nights starting from [saturday](day)
+    - there is going to be [7](people) of us
+    - im also looking for information on the [huntingdon marriott hotel](name)
+    - im looking for an [hotel](type) in the [north](area)
+    - the [ashley hotel](name) will work for me
+    - i need rooms for [5](people) people and [2](stay) nights starting on [thursday](day) if you could make a reservation that would be great
+    - okay thanks i am looking for a particular hotel is well named [gonville hotel](name)
+    - great can you book that for 5 nights first day [wednesday](day) for people please
+    - i need that for [7](people) people if thats not possible then for [4](stay) nights instead and i need a reference number
+    - i would like more information on a hotel called [cityroomz](name) for my trip to cambridge
+    - i would like to stay at a [guesthouse](type) while im in cambridge it doesnt need to have internet
+    - no thanks not yet does it have free parking
+    - i dont have [any]{"entity": "price", "value": "do nt care"} price range in mind i just want a guesthouse with free parking on the [north](area) side
+    - i need a hotel that is [4](stars) stars on the [east](area) side of town
+    - thank you im also looking for a [4](stars) star hotel and i dont care if it includes internet
+    - yes actually i would prefer it to be a [guesthouse](type) with free parking
+    - no i am happy with your first suggestion please reserve [acorn guest house](name) for [7](people) people arriving [sunday](day) for [4](stay) nights
+    - yes i also need a [cheap](price) guest house it should be [4](stars) stars in any area
+    - sunday [2](stay) nights 7 people
+    - i am looking for a particular hotel called [avalon](name)
+    - great can i book that for [6](people) people for [3](stay) nights starting on [tuesday](day)
+    - would you be interested in staying at the [avalon](name) for [1](stay) night if not we can find another hotel available for a 3 night stay for 6 guests
+    - im looking for the [avalon](name) its a nice hotel
+    - i will need to book a room for [6](people) people and 3 nights starting [tuesday](day) please
+    - can you try [1](stay) night
+    - im looking for a [4star]{"entity": "stars", "value": "4"} place to stay it doesnt need to include internet
+    - yes [expensive](price) price range and free parking
+    - i am looking for a place to stay the hotel should be in the type of [guesthouse](type) and doesnt need to include internet
+    - no i need a guesthouse with free wifi
+    - ok i would prefer something else with parking
+    - thanks does it have free wifi as well
+    - i am also looking for [the cambridge belfry](name)
+    - yes for the [same group of people]{"entity": "people", "value": "5"} for [3](stay) nights starting on the [same day]{"entity": "day", "value": "[thursday](day"})
+    - can you find a hotel for me called [alexander bed and breakfast](name)
+    - yes please for [4](people) people for [3](stay) nights starting [saturday](day)
+    - im looking for information on the [autumn house](name) can you help me out
+    - thanks im looking for something in the [east](area) and have [4](stars) stars
+    - actually i would prefer a [hotel](type) rather than a guest house
+    - no i guess a [guesthouse](type) will be fine can you book a room for me for [thursday](day)
+    - yes sounds perfect i want to book it for [4](stay) nights there will be [8](people) people and we will be arriving on [thursday](day)
+    - hello i really need to find a [cheap](price) place to stay in the [east](area) is there anything like that
+    - can you book it for [8](people) people for [4](stay) nights starting on [thursday](day)
+    - is there anything within walking distance of the jinling
+    - i am looking for a hotel with free wifi available for [3](stay) people for [3](stay) nights starting sunday
+    - actually id like a [moderate](price) hotel in the [centre](area) with free wifi i need to book it for [3](stay) people for [3](stay) nights starting [sunday](day) and a reference number please
+    - yes what is the postcode and phone number also i am needing a [4](stars) star [hotel](type) in the [same area]{"entity": "area", "value": "centre"} can you check if one is available for me
+    - please book it for [5](people) people and [4](stay) nights starting [sunday](day)
+    - can you try booking it for just [1](stay) night instead
+    - yes im searching for a [4](stars) star rated places to stay in town it does not need to have any internet connection
+    - do any of them include free parking
+    - [north](area) part of towncheap would [be]{"entity": "price", "value": "cheap"} better
+    - yes can you book it for [7](people) people for [4](stay) nights on [thursday](day)
+    - yes lets try another hotel in the same price range
+    - great thank you can you also help me find a place to stay id like an [expensive](price) [hotel](type) with free parking
+    - i would like a [hotel](type) in the [expensive](price) price range
+    - yes can you get me information about huntingdon marriott hotel
+    - can i book lodging for [7](people) people starting on [saturday](day) were staying for [4](stay) nights
+    - yes i need to find a place to stay in the centre area it should be a [4](stars) star guesthouse with free wifi
+    - hi ive heard of a great hotel called [hobsons house](name) and id like to stay there can you help me locate it
+    - yes i would like to make a reservation for this [saturday](day)
+    - im looking for a hotel called [city centre north b and b](name)
+    - does the hotel have free parking
+    - yes im also looking for a hotel called [avalon](name)
+    - i need to book it for [2](stay) nights starting [wednesday](day) for [2](stay) people
+    - are there any [hotels]{"entity": "type", "value": "hotel"} where the wifi doesnt cost extra
+    - no it just needs to include parking and wifi
+    - i would appreciate it if you could tell me which [hotel](type) includes free wifi and free parking thanks
+    - any price range be a [hotel](type) has free parkin get me the address too
+    - yes im looking for a place to stay in the [centre](area)
+    - i prefer a [guesthouse](type)
+    - id like to find a [moderately]{"entity": "price", "value": "moderate"} priced [guesthouse](type) to stay at in cambridge
+    - maybe if possible i would like a guesthouse that is also 4 star in the [east](area) in addition to being moderate
+    - do you have [any]{"entity": "price", "value": "do nt care"} moderate priced guesthouses that are [4](stars) star anywhere else
+    - i need one that is [moderately]{"entity": "price", "value": "moderate"} priced and does it have free parking
+    - hi can you give me some information on a particular hotel
+    - its called the [university arms hotel](name)
+    - i need [3](stay) nights starting on [thursday](day) should have enough room to accomodate [4](people) people
+    - im looking for a place to stay while in cambridge what is available in the [west](area) area that has free wifi
+    - i need a [guesthouse](type) with a star rating of [0](stars)
+    - is there a [guesthouse](type) located in the [centre](area) with free wifi
+    - i am looking for a place to stay the hotel doesnt need to include internet and should have a star of [4](stars)
+    - no i want an [expensive](price) [hotel](type) with free wifi
+    - if you can please help me find a relatively [expensive](price) [hotel](type) down on the [south](area) end
+    - i am still deciding can you verify whether or not they have free parking
+    - yay yes please book me a room for [2](stay) nights starting on [sunday](day) we will have [8](people) people in our party
+    - i would like to book a taxi from the hotel to the restaurant one that gets me there in time for my reservation
+    - the [north](area) part of town is where i want to go and include free parking and should have a star of [4](stars)
+    - that sounds perfect i need a room for [3](people) people and [4](stay) nights starting from [sunday](day)
+    - lastly a taxi from the hotel to the pool please
+    - i want to to leave the hotel by 10:30
+    - well first i need to find a place to stay i need a hotel in the [south](area) part of town with free parking
+    - i would like a [moderately]{"entity": "price", "value": "moderate"} priced [guesthouse](type) please
+    - can you book that for [1](people) person for [3](stay) nights starting [saturday](day)
+    - im also in need of a hotel in the [same area]{"entity": "area", "value": "centre"} as the restaurant
+    - please see if you can find me a [3star]{"entity": "stars", "value": "3"} hotel on the [east](area)
+    - yes please look for any 3star hotels in town that include free parking east is still preferred
+    - try something in the [center]{"entity": "area", "value": "centre"} of town
+    - yes please its for [2](stay) people and [2](stay) nights starting on [thursday](day)
+    - can you help me book a reservation at the [warkworth house](name) hotel
+    - its just for me and ill be staying for [three]{"entity": "stay", "value": "3"} nights starting from tuesday
+    - i wanted to begin my stay on [tuesday](day) not wednesday could you check for [tuesday](day)
+    - how about [2](stay) nights
+    - i am also looking for a hotel called [archway house](name)
+    - i need it for [one]{"entity": "people", "value": "1"} person [3](stay) nights and starting on [monday](day)
+    - im looking for a hotel called [cityroomz](name) do you know anything about that
+    - yes i would like to book a room for [1](people) person for [three]{"entity": "stay", "value": "3"} nights starting on [tuesday](day)
+    - can you help me find a hotel called [a and b guest house](name)
+    - i am looking for a place to stay the hotel should have a star of [4](stars) and should include free parking
+    - no it just needs to be [cheap](price)
+    - sounds good can i get it for [7](people) people and [4](stay) nights from [thursday](day) please
+    - ok try for [2](stay) nights
+    - can you help me find a hotel in the [north](area)
+    - yes i have a [moderate](price) price range
+    - does it offer free parking if so i would like to book it for [four]{"entity": "stay", "value": "4"} nights starting [thursday](day) for [3](people) people please
+    - i want to know about [4](stars) star hotels that include free parking for guests
+    - it doesnt matter but it should be a [guesthouse](type)
+    - [guesthouses]{"entity": "type", "value": "guesthouse"} not hotel sorry can you suggest one and give me their phone number please
+    - as long as its a guesthouse with [4](stars) stars and free parking i will be happy which one do you recommend
+    - please give me the phone number of a guesthouse it doesnt matter where it is as long as it has parking and [4](stars) stars
+    - i am looking for a [4](stars) star hotel in cambridge with free wifi
+    - i would like to stay in the [centre](area) please
+    - i apologize it looks like i forgot to book the hotel alexander b b [saturday](day) night thru monday [[]{"entity": "people", "value": "2"}](stay:2) for two adults please
+    - im looking for a place to stay in the [north](area) that has free wifi
+    - price is no issue i would like a [3](stars) star [guesthouse](type) though
+    - yes please [4](stay) people for [4](stay) nights starting on [monday](day)
+    - try [2](stay) nights then
+    - ok i also need a [2](stars) star place to stay with free parking
+    - no need to book it for me are there any [3](stars) star hotels in the [moderate](price) price range
+    - i would like it to be a [guesthouse](type) that has free wifi
+    - im looking for a hotel in the centre with free parking
+    - no you dont have to do that can you recommend a 5 star hotel
+    - is there one with a [four]{"entity": "stars", "value": "4"} star rating
+    - can you tell me about the [4](stars) star hotel instead
+    - i want to find a [guesthouse](type) with free parking included can you help
+    - i would really like something [expensive](price)
+    - alright lets try for a [cheap](price) hotel
+    - i meant a [cheap](price) [guesthouse](type) with free wifi
+    - sounds good lets book it [8](people) people for [4](stay) nights starting [friday](day)
+    - can you find me a [three]{"entity": "stars", "value": "3"} star place to stay
+    - i dont have an area preference but it needs to have free wifi and parking at a [moderate](price) price
+    - hi there real quick having a blast i want a really good restaurant not too far from my hotel what do you have
+    - yes please im also looking for a hotel thats [cheap](price) and in the [north](area)
+    - actually can you try a [moderate](price) price hotel in the [north](area) instead sorry for the trouble
+    - yeah i dont need internet other than that could you just recoomend one that has a reasonable number of stars
+    - book it for 2 people and [5](stay) nights starting from the same day
+    - please do so thank you after that i need a cheap hotel
+    - i was looking for a certain hotel called [cityroomz](name) please
+    - thanks could you help me book rooms i need it for [7](people) people for [5](stay) nights starting [thursday](day)
+    - great i also need an idea of hotels that are [moderately]{"entity": "price", "value": "moderate"} priced in the [west](area)
+    - that sounds great i would like to book it for [4](people) people and [2](stay) nights starting from [tuesday](day)
+    - i would prefer to stay in the [south](area) please
+    - ive changed my mind and would prefer to stay in the center of town i need parking wifi and it should have a [0](stars) star rating
+    - no but i do need a reservation for [wednesday](day) [2](stay) nights for [3](people) people
+    - that sounds wonderful is it in the same area as the hotel
+    - my hotel is in the [centre](area) so [the cambridge chop house](name) will actually work can you make me a booking for [3](people) people on [wednesday](day)
+    - im also looking for a [4](stars) star [hotel](type)
+    - are any of those in the [moderate](price) price range
+    - how about one that is in the [expensive](price) price range
+    - yes for [6](people) people for [2](stay) nights on [wednesday](day) and i need the confirmation number
+    - yes i am going to need a taxi to get between the attraction and the [hotel](type) please
+    - no ill look it up later and do it myself but could you tell me if there are any [4](stars) star places to stay in the city [centre](area)
+    - sounds great can you please book that for me for [tuesday](day) for [2](stay) people [2](stay) nights please
+    - can you book a [hotel](type) room for me
+    - id like [cheap](price)
+    - please book it for [5](stay) people and [5](stay) nights starting from [monday](day)
+    - yes can you give me the information on the [huntingdon marriott hotel](name)
+    - yes please i need a reservation for [6](people) people for [5](stay) nights starting on [saturday](day)
+    - how about for [1](stay) night if that works ill need a reference number of course
+    - i am planning a trip to cambridge and im looking for a place to stay i prefer a [4](stars) star hotel in the [west](area)
+    - i would prefer a [guesthouse](type) with free wifi do you have one
+    - actually i think there has been some confusion im looking for a [4](stars) star guesthouse with free wifi in the west the locations you gave me are in the wrong area
+    - that sounds great i also need a [hotel](type) in the [same area]{"entity": "area", "value": "east"} as the attraction
+    - i need a [hotel](type) with free parking
+    - okay can you look for a [hotel](type) without free parking
+    - yes im looking for a hotel called hobsons house
+    - yes please book for [7](people) people and [5](stay) nights starting from [wednesday](day) what is their address and phone number
+    - can you help me find a place to stay that is [moderately]{"entity": "price", "value": "moderate"} priced and includes free wifi
+    - are any of them in the [south](area) id like free parking too
+    - please i need a room on [tuesday](day) for [5](stay) nights [4](people) people will be staying
+    - im looking for a [cheap](price) hotel that has free wifi
+    - i would like one with a [4](stars) star rating is that an option
+    - yes i also need a taxi to take me from the hotel to restaurant i want to leave the hotel by 6:15
+    - hi im trying to find a place to stay called [the cambridge belfry](name) what can you tell me about that
+    - sounds perfect can you book a room for me for [6](people) people [5](stay) nights starting on [friday](day) please send me the reference number
+    - i would like to book a taxi from the hotel to the restaurant
+    - yes im looking for [hotels]{"entity": "type", "value": "hotel"} in the [north](area) area
+    - i dont care about price range or parking but i do require free wifi
+    - i need it to be a [hotel](type) not a guesthouse
+    - i need a three star hotel with internet can you help
+    - great i also need a place to stay that is a [cheap](price) [guesthouse](type)
+    - [friday](day) [4](stay) nights reference number please
+    - i am also looking for a [hotel](type) that is [4](stars) stars and has free wifi i need it in the same part of town as the restaurant
+    - i am looking for price range that is not cheap or expensive
+    - lets try [cheap](price)
+    - yes please for [3](stay) nights and starting on friday
+    - there will be just [one]{"entity": "people", "value": "1"} person
+    - excellent im also looking for a place to stay it should have free parking and free wifi
+    - no not really it just needs to be a [hotel](type)
+    - please have the taxi pick me up at the [hotel](type) can i get the taxi contact number and car type
+    - hi im looking for a [4](stars) star hotel in the [east](area)
+    - yeah a [guesthouse](type) is what im looking for actually
+    - i dont have a particular price range in mind what do you suggest for 8 people and [5](stay) nights i will need it for wednesday
+    - yes please i also need to book a taxi that could take me from hotel to there
+    - book the hotel for [8](people) people [5](stay) nights and starting on [wednesday](day)
+    - i am looking for a place to stay with free wifi
+    - the [north](area) part of town please are there any [guesthouses]{"entity": "type", "value": "guesthouse"}
+    - great could you book [[]{"entity": "people", "value": "1"} one](stay:1) of those for [sunday](day) for me
+    - how about just [1](stay) night
+    - i need a hotel on [sunday](day) for [4](people) people for 3 nights i need the hotel to be a [guesthouse](type) with free wifi
+    - try hotels in the [north](area) then
+    - ok can you try for just [1](stay) night please
+    - i would like to book the [city stop restaurant](name) for [4](people) people on [sunday](day) at [[]{"entity": "time", "value": "15:45"} [15:45](arrive)](arrive:15:45) i need the taxi to get from the hotel to the restaurant by that time
+    - i need a [guesthouse](type) including free parking it should have a [4](stars) star rating on friday can i get the phone number and address
+    - yes im looking to book the hotel el shadai starting on [thursday](day) for [8](people) people and [4](stay) nights
+    - hi this is a twofer i need to find a hotel that offers both free wifi and free parking
+    - yes it needs to be [cheap](price) with [0](stars) stars
+    - im looking for this hotel called [home from home](name) please
+    - actually id like to book it for [6](people) people can you help with that
+    - ill be staying for [5](stay) nights starting on [friday](day)
+    - yes also looking for a [hotel](type) to stay in i would like it to be in the [expensive](price) range and it must have free wifi what do you recommend
+    - is it [2](stars) stars i want it to be [2](stars) stars
+    - okay i want to book the [2](stars) star hotel for [4](stay) people for [4](stay) nights from [wednesday](day)
+    - attraction to the hotel by 9:30
+    - no i don t have an area preference i would like to stay in a [guesthouse](type) with at [4](stars) star rating i also need wifi
+    - i have no price range preference do any have free parking
+    - i need a [guesthouse](type) in the [north](area) to stay at
+    - does it have free parking
+    - [three]{"entity": "people", "value": "3"} people [4](stay) nights thanks
+    - i need a [2](stars) star [hotel](type) with free parking
+    - it can be anywhere in town but id like the [hotel](type) to be in the [cheap](price) price range if possible
+    - how about in the [expensive](price) price range
+    - i would prefer one with a rating of [2](stars) stars
+    - yes i would like to book it for [two]{"entity": "people", "value": "2"} people for [five]{"entity": "stay", "value": "5"} nights starting from [monday](day)
+    - im just looking for something thats in the [same price]{"entity": "price", "value": "expensive"} range as the [hotel](type)
+    - thank you i would also like to book a taxi to go from the [hotel](type) to the restaurant
+    - id like to leave the [hotel](type) by 6:45 once that is booked can you provide me with the phone number and car type
+    - im looking for a place to stay i need to find free parking and i only want to stay in a [hotel](type) and not any thing else other than that
+    - the [hotel](type) should include free wifi
+    - yes please book it for [5](people) people and [4](stay) nights starting from [monday](day)
+    - what can you tell me about the [express by holiday inn cambridge](name)
+    - can you book it for me please i need it for [1](people) person and [5](stay) nights starting on [tuesday](day)
+    - im also looking for a [cheap](price) [hotel](type) to crash in can you find one for me
+    - does it have a star of [3](stars)
+    - do you have any [expensive](price) [hotels]{"entity": "type", "value": "hotel"} with a [3](stars) star rating
+    - that would be great thanks i am also looking for a hotel i would prefer a [3](stars) star hotel i do not need parking
+    - thank you can you help me book a taxi from the college to my hotel
+    - i definitely want both a [guesthouse](type) and the [centre](area) of town
+    - i would like to try another price range only in the [moderate](price) range i would like to stay in the city centre
+    - are there any [cheap](price) guesthouses in the centre of town
+    - there will be 2 people and we will arrive on [monday](day)
+    - im sorry [5](stay) nights please
+    - i need a [cheap](price) place to stay
+    - it should include free parkingthe hotel should include free wifi
+    - whichever is the [cheapest]{"entity": "price", "value": "cheap"} for [2](people) people [5](stay) nights starting [thursday](day) please book it and i will need a reference number thanks
+    - thank you i just want to confirm that this hotel includes free parking and wifi
+    - i am looking for a place in cambridge it doesnt need to include internet and should be a [hotel](type)
+    - okay that would be fine as long as it has free parking
+    - it doesnt matter to me which part of the city its in or its rating in your opinion which one would be best for a short [3](stay) day stay
+    - is there room for [4](people) people on [monday](day)
+    - can i try a different [hotel](type)
+    - do either of those include free parking
+    - no that does not matter as long as i can book a [3](stay) night stay for 4 people on monday
+    - we can try and book that one as long as free parking [4](people) people for [3](stay) nights
+    - im also looking for hotel in the [same area]{"entity": "area", "value": "centre"}
+    - i am looking for a place to stay the [hotel](type) should be in the [moderate](price) price range
+    - i would like a guest house with free parking
+    - [1](people) room and ill need it for [2](stay) nights starting [friday](day)
+    - hello im looking for a [guesthouse](type) in the [north](area) of town
+    - i need an [expensive](price) one
+    - were you able to find a moderately expensive guesthouse in the north i need to book one for 4 people and [2](stay) nights starting on wednesday
+    - is there one in the [moderate](price) range then
+    - nothing else book it for [4](people) people and [2](stay) nights starting from [wednesday](day)
+    - are there any [4](stars) star hotels in cambridge
+    - firstly before that i need a hotel that includes free wifi and parking and needs to be in the [cheap](price) price range
+    - a hotel is fine if you have it please
+    - that is fine i need it for [8](people) people starting [monday](day) for [4](stay) nights can i please have the reference number as well
+    - can you try it for [2](stay) nights
+    - need a hotel [north](area) side of town and i want free wifi please
+    - lets go with a [hotel](type) i would actually like it to have free internet and parking if possible
+    - please give me the star of the hotel address and phone number of [ashley hotel](name)
+    - actually lets hold off on booking the room for now but i do need to find a restaurant in the [same area]{"entity": "area", "value": "north"} that is [[]{"entity": "price", "value": "[moderate](price"}) moderately](price:[moderate](price)) priced
+    - nah the area doesnt matter i coming to celebrate so just as long as its an expensive 4star hotel im good
+    - yes for [2](stay) nights starting [thursday](day)
+    - there will be [5](people) people
+    - i need to find a place to stay in the [east](area) part of town with free parking
+    - yes please book it for [5](people) people and [3](stay) nights starting from [monday](day)
+    - great im going to need a [hotel](type) too it needs to be [cheap](price) but have a [4](stars) star rating
+    - i guess you can book that then for [two]{"entity": "stay", "value": "2"} nights starting on [friday](day)
+    - there will be [5](people) of us
+    - im looking for a [moderate](price) priced place to stay with free wifi
+    - i am not sure what day i am just researching now i would like to have a [4](stars) star hotel are there any options
+    - does it have wifi
+    - nope that isnt important can you book it for [1](people) person for [3](stay) nights starting on [thursday](day) please
+    - could you help me find a place to stay i am looking for a hotel in the [east](area) part of town and it needs free wifi
+    - yes i would like an [expensive](price) hotel with free parking
+    - is it [four]{"entity": "stars", "value": "4"} star
+    - i am looking for an [expensive](price) [hotel](type) to stay at in cambridge please
+    - i dont care what part of town just so that it has a [4](stars) star rating
+    - the university arms [hotel](type) can you book that for [5](stay) nights please
+    - myself and my wife will be staying [5](stay) nights starting on [wednesday](day)
+    - thank you im also in need of a place to stay id like it to be a [hotel](type) with a star of [2](stars)
+    - does the [hotel](type) have free parking
+    - yes please for [3](stay) nights for [8](people) people on [tuesday](day)
+    - hello i am looking for information about [the cambridge belfry](name) its a hotel in cambridge
+    - before you book it can i get the address of [the cambridge belfry](name)
+    - perfect thanks yes actually there is one more thing please get me information on the [huntingdon marriott hotel](name)
+    - i would like the cow pizza kitchen for 4 people at 13:15 on saturday i need a [cheap](price) hotel in center too
+    - is the [avalon](name) a guesthouse if so yes i would like to book for [saturday](day) for [6](people) people [4](stay) nights
+    - im looking for a specific hotel can you help me
+    - hi im looking for a [guesthouse](type) hotel with free parking can you help me with this
+    - guesthouse please with parking available and free wifi im tired of paying extra for wifi
+    - i would like a [hotel](type) in the [west](area) free parking and wifi are a must
+    - id like a [hotel](type) with free parking and also free wifi
+    - hello there could you help me find a [hotel](type) i am looking for one that has free parking and is [expensive](price)
+    - i did not receive any list of hotels can you just pick one for me a [hotel](type) with free parking and wifi that is upscale please
+    - yes as long as it is [expensive](price) i would like to arrive on [tuesday](day) and stay for [3](stay) nights there will be [8](people) of us
+    - can you try for [2](stay) nights instead
+    - i will need a taxi to travel between the [hotel](type) and the college can you handle this also
+    - great can you also help me with a place to stay the one im looking for is called [allenbell](name)
+    - yes for [four]{"entity": "people", "value": "4"} people staying [three]{"entity": "stay", "value": "3"} nights starting [friday](day)
+    - the [hotel](type) should be in the [same area]{"entity": "area", "value": "north"} as the restaurant and should include free wifi
+    - id like a [hotel](type) not a guesthouse and id like a [2star]{"entity": "stars", "value": "2"} place
+    - i would like to book the ashley [hotel](type) for [5](people) people for [2](stay) nights
+    - on [wednesday](day) please
+    - im looking for a hotel called the [autumn house](name) can you give me some information about it
+    - excellent i also need to find a place to stay while in town can you help me find a [cheap](price) hotel
+    - yes ill be staying on the south side so a cheap [4](stars) star guesthouse with free wifi will do
+    - hello can you help me find a hotel in the [north](area) of town
+    - are either of them [moderately]{"entity": "price", "value": "moderate"} priced do they include free wifi
+    - could you book me into one of the 2 hotels please
+    - i would like a [hotel](type) with a [4](stars) star rating please it also must include free wifi
+    - i am traveling to cambridge and am interested in trying local restaurants and finding a [hotel](type) for my stay
+    - i need to find a [hotel](type) with a [3](stars) star rating that includes free wifi
+    - i want [chinese](food) food in [cheap](price) price range in [west](area) side of town a [3](stars) star [hotel](type) that is [expensive](price) and includes wifi also the [hotel](type) address area and postcode please
+    - thanks for your help with the [hotel](type) how about a restaurant in the [centre](area) that serves [indian](food) food
+    - i also need a taxi from the restaurant to the [hotel](type) i would like to leave the restaurant by [11:15]{"entity": "leave", "value": "01:00"}
+    - yes i am looking for a place to stay that has free wifi and is ranked by [4](stars) stars
+    - id like a hotel in the [east](area) part of the city
+    - lets go for the one in the [centre](area) please can you make is for [2](people) people for [4](stay) nights starting [monday](day) oh and can i get the reference number
+    - in the [same price]{"entity": "price", "value": "expensive"} range as the other hotels
+    - i would like to find an [expensive](price) hotel to stay at that also has free wifi can you help
+    - i also want to stay in a hotel with star rate of [3](stars) that is in the [south](area) does university arms fit that criteria
+    - yes that sounds great can you book me a room for [4](people) people [2](stay) nights starting [tuesday](day) please
+    - yes hi i am looking for a hotel in the tampa bay area
+    - can you suggest another place is there a hotel with [4](stars) stars in that area

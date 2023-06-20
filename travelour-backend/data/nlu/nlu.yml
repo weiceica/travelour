@@ -1,0 +1,50 @@
+version: "3.1"
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+- intent: hello_world
+  examples: |
+    - helloworld
+    - oracld
+    - say that phrase
+    - say the word
+- intent: inform_name
+  examples: |
+    - [Ayaz khan](user_name)
+    - [Srijan Srivastava](user_name)
+    - [Saroj Choudhari](user_name)
+    - [Shubham More](user_name)
+    - [Dinesh Choudhari](user_name)
+    - [Ayaz](user_name)
+    - [Srijan](user_name)
+    - [Saroj](user_name)
+    - [Shubham](user_name)
+    - [Dinesh](user_name)
+    - [Pramod](user_name)
+    - [Pramod Sharma](user_name)
+    - [Atharva](user_name)
+    - [Chuang]
+    - [Leo]
+    - my name is [saroj](user_name)
+    - my name is [ayaz](user_name)
+    - my name is [srijan](user_name)
+    - my name is [shubham](user_name)
+    - my name is [dinesh](user_name)
+    - i am [saroj](user_name)
+    - i am [ayaz](user_name)
+    - i am [srijan](user_name)
+    - i am [shubham](user_name)
+    - i am [dinesh](user_name)

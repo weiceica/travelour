@@ -1,0 +1,160 @@
+version: '3.1'
+intents:
+  - general-bye
+  - thank
+  - greet
+  - hello_world
+  - flight
+  - weather
+  - inform_name
+  - hotel-inform
+entities:
+  - depart_date.day_name
+  - depart_date.today_relative
+  - depart_time.time_relative
+  - fromloc.city_name
+  - toloc.city_name
+  - address
+  - date-time
+  - name 
+  - type
+  - price
+  - stay
+  - day
+  - people
+  - area
+  - stars
+  - dest
+  - depart
+  - arrive
+  - leave
+  - food
+  - department
+  - time
+  - phone
+  - post
+  - addr
+  - parking
+  - internet
+slots:
+  flight_departure:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: fromloc.city_name
+  flight_destination:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: toloc.city_name
+  flight_depart_date:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: depart_date.day_name
+    - type: from_entity
+      entity: depart_date.today_relative
+  weather_location:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: address
+    - type: from_entity
+      entity: addr
+    - type: from_entity
+      entity: fromloc.city_name
+    - type: from_entity
+      entity: toloc.city_name
+  weather_date:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: date-time 
+    - type: from_entity
+      entity: day
+  arrive:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: arrive
+    - type: from_entity
+      entity: day
+  addr:
+    type: text
+    mappings:
+    - type: from_entity
+      entity: addr 
+    - type: from_entity
+      entity: toloc.city_name
+forms:
+  simple_flight_form:
+    required_slots:
+    - flight_departure
+    - flight_destination
+    - flight_depart_date
+  simple_weather_form:
+    required_slots:
+    - weather_date
+    - weather_location
+  simple_hotel_form:
+    required_slots:
+    - addr
+    - arrive
+responses:
+  utter_please_rephrase:
+  - text: I'm sorry, I didn't quite understand that. Could you rephrase?
+  utter_greet:
+  - text: Hello!
+  utter_cheer_up:
+  - text: 'Here is something to cheer you up:'
+    image: https://i.imgur.com/nGF1K8f.jpg
+  utter_ask_what_service:
+  - text: What can I help you today?
+  utter_did_that_help:
+  - text: Did that help you?
+  utter_happy:
+  - text: Great, carry on!
+  utter_goodbye:
+  - text: Bye
+  utter_ask_flight_departure:
+  - text: What is the departure of your flight?
+  utter_ask_flight_destination:
+  - text: What is the destination of your flight?
+  utter_ask_flight_depart_date:
+  - text: What is the desired date of your departure?
+  utter_ask_weather_date:
+  - text: Which date do you want to check the weather?
+  utter_ask_weather_location:
+  - text: Which city or region do you want to check the weather
+  utter_ask_addr:
+  - text: In which city do you want to stay?
+  utter_ask_arrive:
+  - text: When would you like to check in?
+actions:
+  - action_hello_world
+  - action_query_flight_info
+  - action_query_weather_info
+  - action_query_hotel_info
+  - action_custom_fallback
+  - utter_ask_flight_depart_date
+  - utter_ask_flight_departure
+  - utter_ask_flight_destination
+  - utter_ask_weather_date
+  - utter_ask_weather_location
+  - utter_ask_what_service
+  - utter_cheer_up
+  - utter_did_that_help
+  - utter_goodbye
+  - utter_greet
+  - utter_happy
+  - validate_simple_flight_form
+  - validate_simple_weather_form
+  - validate_simple_hotel_form
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

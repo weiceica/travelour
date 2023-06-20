@@ -1,0 +1,156 @@
+version: "3.1"
+nlu:
+- intent: general-bye
+  examples: |
+    - no that will be all good bye
+    - no i am all set have a nice day bye
+    - no i dont need anything else right now thank you for your assistance good bye
+    - thats all i need today thanks bye
+    - actually im all set thank you bye
+    - no thanks thats all the help i need take care bye
+    - thats all i needed for today thanks a bunch bye
+    - no that looks like everything thanks bye
+    - thanks thats all good bye
+    - that is great im so excited thanks for you help bye
+    - no i dont need anything else thank you and bye
+    - awesome that will be it for tonight have a good day bye
+    - thanks so much thats all for today bye
+    - no youve been very helpful thank you bye
+    - no you have quickly answered all my questions thank you so much good bye
+    - thank you for your help thats all i needed good bye
+    - thats alright thanks so much ive got nothing more today bye
+    - thank you good bye
+    - thank you very much thats all i need today bye
+    - no thank you that was all i needed good bye
+    - that is all i will need thank you bye
+    - no thank you bye bye
+    - thanks so much you have helped with everything i need for the trip bye
+    - great you have been very helpful that is all i needed thanks bye
+    - thank you that is all the info that i needed good bye
+    - no thanks that does it have a good night bye
+    - no thats all good bye
+    - no thanks i think that was all have a good day bye
+    - okay that will be all good bye
+    - nope you have been extremely helpful thanks again bye
+    - thanks so much you have been very helpful that is all ill be needing for today bye
+    - no that would be all thanks bye
+    - thanks so much im all set for my trip now bye
+    - thanks thats all i need good bye
+    - no that is all bye
+    - no thank you good bye
+    - have a great day good bye
+    - no thanks have a good day bye
+    - actually that sounds good you gave me the info i need thanks bye
+    - no i am not this is all i need thanks good bye
+    - have a good day bye
+    - thank you that will be all for me today bye
+    - okay thanks thats all i need from you have a good day bye
+    - okay thanks anyway good bye
+    - thanks so much i think thats all i needed have a great day bye
+    - no thank you that was it for today thank you very much for your assistance have a good one good bye
+    - no that is all i need thanks so much bye
+    - that is it thank you for your help good bye
+    - i think that is all i need thank you good bye
+    - thats all i need thank you and good bye
+    - thank you thats all i need good bye
+    - no that is all good bye
+    - i think that is all i need for now thanks bye
+    - bye
+    - no i think that covers it thanks so much for your help bye
+    - no thank you that will be all bye
+    - no that is all i need for today good bye
+    - no you have been very helpful i dont have any other questions thanks bye
+    - have a nice day bye
+    - no i think thats all good day bye
+    - i think that is all i need thank you and good bye
+    - thanks that will be all good bye
+    - thank you for the information good bye
+    - ok hope you have a good day too bye
+    - no that is all thanks for being so helpful for my upcoming trip looking forward to my stay bye
+    - thanks so much for your help bye
+    - thanks for the help bye
+    - great thanks a lot thats all i will be needing have a good day bye
+    - thanks good bye
+    - thanks thatll be it for me today bye
+    - youve been great have a great day bye
+    - oh yeah im so there thanks a lot thats all i needed help with today bye
+    - no that will be all thanks for all your help bye
+    - you have a fantastic day as well good bye
+    - no thats all thanks good bye
+    - that is all i need today good bye
+    - thank you for all your help good bye
+    - that will work thanks so much take care bye
+    - no that will be all thanks good bye
+    - nope thats it thanks good day to you bye
+    - no you have been extremely helpful already i am all set thanks bye
+    - ok thank you good bye
+    - thanks again bye
+    - i dont believe so i think that does it have a great night bye
+    - no thats all the information i need for now thank you very much have a nice evening good bye
+    - thank you that is all good bye
+    - thats all thank you bye
+    - no thats all i needed thanks bye
+    - thank you for your help good bye
+    - no thank you i am all set bye
+    - thanks you too good bye
+    - no that is all thank you good bye
+    - thats everything actually thanks a ton bye
+    - thank you that is all i need good bye
+    - no that is just what i needed thanks for your help bye
+    - no thats all for me thanks bye
+    - thank you that is all the information i needed bye bye
+    - thank you youve been a big help goodbye
+    - thank you so much for all of your help today i am all set bye
+    - bye and have a great day
+    - thanks bye now
+    - i actually wont need a reservation just the information you provided is enough thank you have a good day bye
+    - wonderful thank you that is all i need for today bye
+    - no thanks that wont be necessary have a great day thanks bye
+    - thanks so much for all of your help today i wont be needing anything else bye
+    - that is all i needed good bye
+    - thanks so so much thats all now bye
+    - um yes you too bye bye now
+    - bye have a good time
+    - no thanks i think that answered all my questions have a nice day bye
+    - thank you for your assistance bye
+    - thank you that will be all good bye
+    - great have a nice day good bye
+    - thank you so much thats all i need today goodbye
+    - perfect thats all for today bye
+    - sounds great that is all i needed bye
+    - thanks thats all i need bye
+    - thank you so much you took care of everything thanks bye
+    - thank you bye
+    - no i think you took care of everything have a nice night bye
+    - no you have been helpful thanks so much bye
+    - i will try that one thank you and good bye
+    - perfect thank you that is all i need bye
+    - no that is all i need thanks bye
+    - okay im all done thanks bye
+    - thanks again good bye
+    - you have been extremely helpful thank you so much i am all set have a nice day bye
+    - thank you for your help that will be all good bye
+    - no that is all thanks so much bye
+    - you have been so helpful thank you i have no other requests good bye
+    - good bye
+    - no thatll be all for now you were a great help have a nice day bye
+    - no i can book myself later thanks good bye
+    - good i really wanted to eat there no i dont need anything else thank you bye
+    - thank you so much good bye
+    - no that is all i needed thank you so much bye
+    - thanks thats all i needed today bye
+    - no thanks that looks like everything have a good day bye
+    - thank you very much good bye
+    - that was all i needed thanks bye
+    - thanks so much that is all i need for today bye
+    - thank you im not ready to book just yet i just wanted the information thats all i need for now goodbye
+    - not at his time but i will keep it in mind have a good day bye
+    - that sounds perfect thank you that is all i need for now good bye
+    - ok that will be perfect i think thats all i need bye
+    - no thats okay thanks for your help bye
+    - no i dont need any other help you took care of it all thanks bye
+    - thats all i needed thanks bye
+    - no thanks i think thats all have a nice day bye
+    - great thank you i dont need anything else bye
+    - no that was all good bye
+    - of course thanks good bye

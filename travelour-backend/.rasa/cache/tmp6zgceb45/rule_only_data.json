@@ -1,0 +1,8 @@
+{
+  "rule_only_slots": [],
+  "rule_only_loops": [
+    "simple_weather_form",
+    "simple_hotel_form",
+    "simple_flight_form"
+  ]
+}

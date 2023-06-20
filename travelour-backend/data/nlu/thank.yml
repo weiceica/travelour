@@ -1,0 +1,361 @@
+version: "3.1"
+nlu:
+- intent: thank
+  examples: |
+    - thank you that will be all for now
+    - thank you very much goodbye
+    - thank you goodbye
+    - thank you for all the help i appreciate it
+    - thank you thats all i needed
+    - thats all i need for today thanks for your help
+    - great thats all that i needed to know thank you
+    - thank you that will do
+    - thats all i need right now thanks you have been very helpful
+    - thats all i need thanks so much for all of your help have a great day
+    - also thanks for the apology i dont need anything else at this time
+    - thats all i need today thank you
+    - no thank you ill just give them a call thats all i needed for now
+    - thank you that is all i need
+    - ok sounds good thank you
+    - that is all thank you for your help
+    - no i do not think so thank you for your help
+    - thank you that is all that i need
+    - that is all for now thank you
+    - no thank you that was all i needed today
+    - ok thank you that will be all i need for now
+    - no i dont need to i was just curious about it thank you for all of your help
+    - no thats everything i needed and then some actually thanks take care
+    - no i dont need you to do that thank you
+    - that is all thank you
+    - no thank you thank you for your help
+    - thats it thank you
+    - no that is all thank you so much for your help
+    - thats all i need for now thank you very much
+    - that sounds like a great place to stay thank you for your help
+    - thank you for your help
+    - that is all thanks again
+    - no we are all set thanks for making this trip easier
+    - that all thank you very much for all your help
+    - no that will be everything thank you
+    - that will be okay for now thanks
+    - thank you i appreciated your assistance
+    - i am not sure of the type of food but could you please check again and see if you can find it thank you
+    - thank you that is all the information i need at the moment
+    - you have thank you goodbye
+    - that will be all thank you
+    - thank you very much that is all i need for today
+    - thanks for your help
+    - no that will be all thanks
+    - no thanks would you book the [autumn house](name) for me starting on monday please
+    - that should be all i need thanks for your help
+    - nope thats it thanks
+    - no worries ill give them a call and find out thanks so much for all your help goodbye
+    - no that would be everything thank you
+    - thank you i will
+    - i dont think so that was everything thanks goodbye
+    - no i think that will be all thank you for your help
+    - thank you very much
+    - okay great thanks for your help
+    - ok thank you so mucy
+    - thank you so much thats all i need
+    - thank you i have all i need goodnight
+    - no i can do that after i discuss it with my boss thanks for your help with everything today goodbye
+    - thank you can you book it for me
+    - nope thats all i needed thank you
+    - no thanks for your help
+    - no that will be all the info i need thank you
+    - thats it thanks
+    - thanks i will definitely try to
+    - thanks so much thats all i needed for today
+    - you too thanks again
+    - that sounds fantastic thank you
+    - that is all thanks for your help
+    - thats literally every thing i needed today youve been amazing thank you so much
+    - no that would be fine thank you that was all i needed for today
+    - no thank you i was just preplanning a route
+    - no that should be all for now thank you for the help
+    - no i think thats it for right now thanks
+    - thank you for your help have a great day
+    - that is all i needed thank you
+    - no that will be all thank you goodbye
+    - thank you that is all i need today
+    - make sure you get contact number and ill be there as soon thank you
+    - no i believe we got everything covered todaythanks goodbye
+    - thank you very much i think thats all i needed
+    - that sounds perfect thank you
+    - no that is all i need today thank you
+    - that wont be necessary thanks
+    - thanks thats all i needed today youve been a great help goodbye
+    - sounds like a plan thank you for all of the help
+    - thats all for now thank you so much
+    - no i think thats all i need for now thank you so much for your help
+    - thank you
+    - thank you you have been very helpful i think that is all i need
+    - no thank you very much for your help
+    - no i think that is everything i can think of thanks for your help
+    - thank you thats everything i will need today
+    - great thanks for all your help
+    - thats it thank you for all your help
+    - no thank you thats all the information i need
+    - thank you i wont be needing anything else
+    - no that sounds about right thanks
+    - thanks for all of your help youve been great
+    - thank you so much for all your help
+    - great thats all i need thank you for your help
+    - no that is all for today thanks so much
+    - im actually all set now thanks so much take care now
+    - thats all thank you
+    - yes id like that thank you so much
+    - thanks thats all i needed today
+    - no thank you i believe that is all i need today
+    - no that was all the information i needed thanks so much have a good day
+    - thanks so much for your help
+    - no that will be all thank you
+    - thank you so much goodbye
+    - no thank you appreciate your help
+    - great thanks for your help
+    - that is all i need thank you for your help
+    - thanks i need the reference number please
+    - no you have been very helpful today thank you i am all set goodbye
+    - no thats it thanks a bunch
+    - i think that is all i need for today thank you for all your help
+    - thank you so much
+    - im not ready to book but i appreciate your help thanks
+    - thank you so much thats all i need for tonight take care goodbye
+    - great thank you for your help
+    - adress and phone number please and thank you
+    - great that is all i need for now thank you
+    - yes thanks for all your help today
+    - thanks i appreciate your help goodbye
+    - great thanks that was everything
+    - that is all i need thank you
+    - no thats all i need for now thanks
+    - thats all for now thank you
+    - that is all thanks so much
+    - thank you so much for this information
+    - thank you for your help ill pick up tickets at the station
+    - thank you i think that is it enjoy your day
+    - great that should be all i need thank you for your help
+    - thank you that is all i need for now
+    - no thank you that will be all
+    - no that will be all thanks for your help
+    - no thats all i need today thank you for your help
+    - no thats all i needed thanks for your help cheers
+    - that will do it thank you for your assistance have a good day
+    - no thank you i dont need a ticket at this time
+    - thank you that will be all
+    - this time that is everything thank you for your help
+    - [curry prince](name) sounds good thank you
+    - i am all set thanks
+    - thank you for the information
+    - thanks for all your help that will be all for today
+    - no that should be it thanks
+    - no thank you thats all i need
+    - ok thank you that is everything that i need
+    - no that is all that i needed thank you for your help
+    - thanks for your help have a great day
+    - no thats okay thanks
+    - thanks that takes care of everything for me have a good one
+    - no that does it thank you and goodbye
+    - no thank you and that is all i needed
+    - okay thank you for your help that is all i believe
+    - great thank you what is the address for the alphamilton
+    - okay i think that will do thank you so much
+    - no that is all thank you
+    - that will be ok thank you for your help
+    - no thats all thank you
+    - i will thanks again
+    - thats great thanks
+    - no thank you
+    - actually i change my mind i will take care of the booking later thanks for your help goodbye
+    - nope thats everything thanks a bunch
+    - no thats all i need thanks
+    - thanks for all the bookings im ready for my visit now take care goodbye
+    - yeah anytime thanks again
+    - no thanks i will book later on i think that was all i needed thanks goodbye
+    - thats all i needed thanks so much for the assistance
+    - anywhere should be fine thanks
+    - thank you very much for you help have a nice day
+    - excellent thanks a lot i think thats everything i need
+    - no that would be all thank you goodbye
+    - no thanks just gethering info for the real boos my wife i have no further questions
+    - awesome thanks a lot thats all i needed help with today
+    - yes that is all i need thank you
+    - thank you for your help today
+    - great thank you so much
+    - no thank you please tell me about the ticket pricing and time of travel
+    - that is all thank you for your help today
+    - that is fine thats all thank you goodbye
+    - not just yet i have everything i need for today thanks so much for your help have a great day
+    - thank you so much that is all i will be needing today have a nice evening
+    - i dont think i need it but thanks for asking have a good day
+    - thank you youve been a great help
+    - no thank you thats all for now
+    - thank you for your time and help sorry for the confusion have a great day
+    - that would be all thanks you very much
+    - thank you for looking that up for me
+    - yes that is everything thank you for all your help goodbye
+    - awesome thank you
+    - thank you for the information to [archway house](name) that will be all for now
+    - no thats everything i needed today thank you
+    - that takes care of everything thank you for the help
+    - not at this time thank you
+    - nope thats all i need thanks
+    - no i think thats all i need thank you
+    - thank you very much that will be all for today i appreciate all your help
+    - no thanks not necessary thanks though goodbye
+    - thank you thats all i needed today
+    - thank you that will be all i need
+    - yes please book that for me thanks so much
+    - i think that about does it thanks for the help today
+    - thats perfect thank you for all of your help
+    - no thanks thank you and goodbye
+    - yes thats pretty good thanks
+    - no that is it thank you
+    - thats everything i need thank you for your help
+    - no not at this time i just needed the information thank you and have a nice day
+    - no that was all i needed thank you so much
+    - thank you that is all for now
+    - umno i think i should be good with that thanks
+    - thank you very much i am all set have a nice day
+    - thank you much i also need to find a place to stay
+    - that sounds great thank you
+    - no that is all thank you cheers
+    - no thats all thanks
+    - great thats all i needed thank you
+    - that would be it thank you very much
+    - great thanks
+    - no thats it thank you for your help
+    - that would be great thanks
+    - no im all set thanks for the help
+    - thanks you too
+    - no thats perfect thanks
+    - okay thank you very much for your help
+    - that will be it thank you very much for your time
+    - no thats all i need thank you
+    - thanks im also looking for a place to go in the same area
+    - no that is all thank you for your help goodbye
+    - thank you for all your information
+    - thank you this is great
+    - thanks so much youve been helpful
+    - thats all i need thanks
+    - very good thats all thanks
+    - thats all i need for today thank you
+    - thats all i needed thank you
+    - thank you very much that is all for today
+    - yes i am sure thank you
+    - no thats all i need from you today thanks a bunch
+    - that will be all thanks for all of your help
+    - thank you have a great day
+    - no thank you for your help
+    - thank you that is all i need goodbye
+    - thanks so much thats all i need goodbye
+    - no ill wait on that for now thanks for all your help today thats all i need goodbye
+    - ok thats all the information i need thank you for your help
+    - no thank you that will be everything i need today you have a nice day
+    - no thats it thank you for all your help
+    - thank you thats all i need today
+    - thanks so much have a great day goodbye
+    - thank you so much for your help
+    - nope you have been so helpful thank you
+    - ok thank you so much that is all that i need
+    - thats everything i needed thank you
+    - thats perfect thanks
+    - thank you for reserving that for me thats all i need today
+    - no thank you i think that will be everything today
+    - thank you for your time
+    - no that will be everything thanks for your help
+    - no booking needed i have everything i need thank you and have a nice day
+    - thank you for your help that was all i needed for today thanks
+    - thats all i needed today thank you
+    - that is all i needed for today thanks for helping
+    - ok thank you that is all i need
+    - no thank you id just like to have the information for now
+    - no thanks that will be all for today thanks goodbye
+    - thanks thats all i need have a nice day
+    - that will be all thank you for all your help
+    - no that is all i need thank you
+    - no thanks youve been very helpful goodbye
+    - youve been great that is all i needed thank you goodbye
+    - thanks i also need a guesthouse to stay in
+    - well thank you i am done
+    - thank you for all the help
+    - great thank you have a great day goodbye
+    - sounds great thank you for the info
+    - no thank you so much for your help today have a good day
+    - that takes care of what i needed today thanks and have a good day
+    - sounds good thank you
+    - actually ive changed my mind im going to wait on that reservation thanks
+    - thatll be all thank you
+    - thanks thats it for today thanks again goodbye
+    - yes thats all thank you very much
+    - thank you very much for all your help today that is all i need for now
+    - nope thats all i need thank you
+    - thanks for all of your help
+    - no thank you not at this time
+    - that will be all today thank you
+    - thanks so much that sounds perfect
+    - no i think that covers everything thanks so much for your help
+    - thank you so much would you be able to book it
+    - no that was it thank you so much for your help
+    - thanks have a good rest of the day
+    - nope thats all thanks youve been most helpful today most helpful indeed
+    - that should be all thank you for your help
+    - thank you im all set goodbye
+    - that takes care of it thank you very much
+    - no thats everything thanks for your help
+    - no thanks just the information is enough
+    - no that will be all today thank you
+    - thats it thank you so much for your help
+    - no thank you i have everything i need for now
+    - great that sounds perfect thanks
+    - not today thank you so much for your help i appreciate everything you do
+    - thanks im all set here you can end the conversation now
+    - thanks very much for your help today
+    - that sounds good thank you for your help
+    - no you have covered everything thank you
+    - no thank you that is all the information i needed today
+    - thank you so much for all your help today
+    - thank you i think that will be all for today
+    - no thats all i wanted to know thanks
+    - ok thank you i will need to know what kind of car is picking me up
+    - no but thanks for all your help goodbye
+    - no thank you that is all i needed
+    - no youve been a great help mate thanks for everything
+    - thanks for helping
+    - no i think i will wait on booking at this time thank you for your assistance
+    - no that is all i needed thank you
+    - ok now i am done thanks
+    - that was all thank you
+    - great thats very helpful thank you
+    - i think that is all for today thank you for all your help
+    - thanks for the info i will give them a call
+    - no thats all i need today thank you
+    - great thank you for all your help
+    - ok thanks thats all i need
+    - no thank you that was all the info i needed today
+    - yes please that would be great thank you
+    - great thats all i need thanks so much for your help have a great day
+    - no thats all i want thank you
+    - that sounds perfect thats all that i needed to know thank you for your help
+    - thank you so much that is everything that i need
+    - that is everything thank you so much for your assistance
+    - thank you i think that is all i need today
+    - excellent thank you goodbye
+    - no that is all i need today thanks
+    - no thank you youve been very helpful today
+    - no thats it youve been great thank you
+    - no that is all thank you very much
+    - no but thank you for everything have a nice day
+    - thanks that is all for today
+    - thanks i hope your day is good too
+    - no thank you you have been so helpful
+    - thanks for being a great help
+    - great thats all i need thank you
+    - thanks thats it for today goodbye
+    - that is everything thank you for your help
+    - great thank you for all your help goodbye
+    - great that was all i needed thanks for your help today
+    - no i think that covers it all thanks for your help
+    - no thank you thats it
+    - thanks so much thats all i need today

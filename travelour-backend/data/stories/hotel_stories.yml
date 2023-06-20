@@ -1,0 +1,512 @@
+# version: "3.1"
+# stories:
+# - story: path nr 0
+#   steps:
+#   - intent: hotel-inform
+#     entities:
+#     - type: hotel
+#     - price: cheap
+#   - action: utter_hotel-request-area
+#   - intent: hotel-inform
+#     entities:
+#     - parking: yes
+#   - action: action_booking-inform
+#   - action: action_hotel-inform
+#   - intent: hotel-inform
+#     entities:
+#     - stay: '3'
+#     - day: tuesday
+#     - people: '6'
+#   - action: utter_booking-nobook
+#   - action: utter_booking-request-stay
+#   - action: utter_booking-request-day
+#   - intent: hotel-inform
+#     entities:
+#     - stay: '2'
+#   - action: utter_general-reqmore
+#   - action: utter_booking-book
+#   - intent: general-bye
+#   - action: utter_general-bye
+
+# - story: path nr 2
+#   steps:
+#   - intent: hotel-inform
+#     entities:
+#     - area: east
+#     - stars: '4'
+#   - action: utter_hotel-request-price
+#   - intent: hotel-inform
+#     entities:
+#     - parking: yes
+#     - internet: yes
+#   - action: action_hotel-recommend
+#   - action: utter_booking-request-day
+#   - intent: hotel-inform
+#     entities:
+#     - day: friday
+#   - intent: hotel-request-ref
+#   - action: utter_general-reqmore
+#   - intent: hotel-inform
+#     entities:
+#     - stay: '4'
+#     - day: monday
+#     - people: '3'
+#   - action: utter_booking-book
+#   - intent: general-thank
+#   - action: utter_general-bye
+#   - action: utter_general-welcome
+
+# - story: path nr 6
+#   steps:
+#   - intent: hotel-inform
+#     entities:
+#     - area: east
+#   - action: utter_hotel-request-price
+#   - action: action_hotel-inform
+#   - intent: hotel-inform
+#     entities:
+#     - parking: yes
+#     - price: do nt care
+#   - action: action_hotel-inform
+#   - action: utter_general-reqmore
+#   - intent: hotel-inform
+#     entities:
+#     - type: guesthouse
+#   - action: utter_hotel-request-price
+#   - action: action_hotel-inform
+#   - action: action_booking-inform
+#   - action: action_hotel-inform
+#   - intent: hotel-inform
+#     entities:
+#     - internet: yes
+#   - intent: hotel-request-addr
+#   - action: action_hotel-recommend
+#   - intent: general-bye
+#   - action: utter_general-bye
+
+# - story: path nr 13
+#   steps:
+#   - intent: hotel-inform
+#     entities:
+#     - name: city centre north b and b
+#   - action: action_booking-inform
+#   - action: action_hotel-inform
+#   - intent: hotel-inform
+#     entities:
+#     - stay: '4'
+#     - day: saturday
+#     - people: '6'
+#   - action: utter_booking-nobook
+#   - action: utter_booking-request-stay
+#   - intent: hotel-inform
+#     entities:
+#     - stay: '2'
+#   - action: utter_booking-book
+#   - intent: general-thank
+#   - action: utter_general-bye
+#   - action: utter_general-welcome
+
+# - story: path nr 14
+#   steps:
+#   - intent: hotel-inform
+#     entities:
+#     - area: north
+#   - action: action_hotel-inform
+#   - action: utter_general-reqmore
+#   - intent: hotel-inform
+#     entities:
+#     - parking: yes
+#   - action: action_hotel-inform
+#   - action: utter_booking-request-day
+#   - action: utter_booking-request-people
+#   - intent: hotel-inform
+#     entities:
+#     - stay: '2'
+#   - action: utter_hotel-request-price
+#   - action: utter_hotel-request-stars
+#   - action: action_hotel-inform
+#   - intent: hotel-inform
+#     entities:
+#     - type: guesthouse
+#     - area: north
+#   - intent: hotel-request-ref
+#   - action: utter_general-reqmore
+#   - action: utter_booking-book
+#   - intent: general-bye
+#   - action: utter_general-bye
+
+# - story: path nr 24
+#   steps:
+#   - intent: hotel-inform
+#     entities:
+#     - name: express by holiday inn cambridge
+#   - action: action_hotel-inform
+#   - action: utter_general-reqmore
+#   - intent: hotel-inform
+#     entities:
+#     - people: '7'
+#   - action: utter_booking-request-day
+#   - action: utter_general-greet
+#   - intent: hotel-inform
+#     entities:
+#     - stay: '4'
+#     - day: monday
+#     - people: '7'
+#   - action: utter_booking-book
+#   - action: action_train-inform
+#   - action: action_train-select
+
+# - story: path nr 33
+#   steps:
+#   - intent: hotel-inform
+#     entities:
+#     - area: north
+#   - action: action_hotel-recommend
+#   - action: action_hotel-inform
+#   - intent: general-thank
+#   - action: utter_general-reqmore
+#   - intent: hotel-inform
+#     entities:
+#     - stay: '2'
+#     - day: tuesday
+#     - people: '4'
+#   - action: utter_general-reqmore
+#   - action: utter_booking-book
+#   - intent: attraction-inform
+#     entities:
+#     - area: west
+#     - type: museum
+#   - intent: attraction-request-fee
+#   - action: action_attraction-recommend
+#   - action: action_attraction-inform
+#   - intent: general-bye
+#   - action: utter_general-bye
+
+# - story: path nr 38
+#   steps:
+#   - intent: hotel-inform
+#     entities:
+#     - parking: yes
+#     - stars: '4'
+#   - action: action_booking-inform
+#   - action: action_hotel-inform
+#   - intent: hotel-inform
+#     entities:
+#     - area: centre
+#   - action: action_booking-inform
+#   - action: action_hotel-select
+#   - action: action_hotel-inform
+#   - intent: hotel-request-price
+#   - action: action_booking-inform
+#   - action: action_hotel-inform
+#   - intent: hotel-request-addr
+#   - action: action_hotel-inform
+#   - action: utter_general-reqmore
+#   - intent: attraction-inform
+#     entities:
+#     - area: centre
+#     - type: college
+#   - action: utter_attraction-request-price
+#   - action: action_attraction-inform
+#   - intent: attraction-request-addr
+#   - intent: attraction-request-post
+#   - action: action_attraction-recommend
+#   - action: utter_general-reqmore
+#   - intent: general-thank
+#   - action: utter_general-bye
+#   - action: utter_general-welcome
+
+# - story: path nr 44
+#   steps:
+#   - intent: hotel-inform
+#     entities:
+#     - name: autumn house
+#   - action: action_hotel-inform
+#   - intent: general-thank
+#   - intent: hotel-inform
+#     entities:
+#     - name: autumn house
+#   - action: utter_booking-request-people
+#   - action: utter_booking-request-stay
+#   - intent: hotel-inform
+#     entities:
+#     - stay: '2'
+#     - people: '8'
+#   - action: utter_booking-nobook
+#   - action: utter_booking-request-stay
+#   - action: utter_booking-request-day
+#   - intent: hotel-inform
+#     entities:
+#     - day: wednesday
+#   - action: utter_booking-book
+#   - intent: general-thank
+#   - action: utter_general-bye
+
+# - story: path nr 47
+#   steps:
+#   - intent: hotel-inform
+#     entities:
+#     - price: moderate
+#     - area: south
+#   - action: utter_hotel-nooffer
+#   - action: action_hotel-inform
+#   - intent: hotel-inform
+#     entities:
+#     - stars: '4'
+#   - action: action_hotel-inform
+#   - intent: hotel-inform
+#     entities:
+#     - stars: '3'
+#   - action: action_hotel-recommend
+#   - action: action_booking-inform
+#   - intent: hotel-inform
+#     entities:
+#     - stay: '2'
+#     - day: thursday
+#     - people: '6'
+#   - action: utter_general-reqmore
+#   - action: utter_booking-book
+#   - intent: attraction-inform
+#     entities:
+#     - name: wandlebury country park
+#   - action: utter_general-reqmore
+#   - action: action_attraction-inform
+#   - action: utter_general-greet
+#   - intent: general-thank
+#   - action: utter_general-welcome
+
+# - story: path nr 48
+#   steps:
+#   - intent: hotel-inform
+#     entities:
+#     - type: hotel
+#     - area: centre
+#   - action: action_hotel-select
+#   - action: action_hotel-inform
+#   - intent: hotel-inform
+#     entities:
+#     - parking: yes
+#     - stars: '3'
+#   - action: action_hotel-inform
+#   - action: utter_general-reqmore
+#   - intent: hotel-inform
+#     entities:
+#     - type: hotel
+#     - name: gonville hotel
+#     - stay: '4'
+#     - day: saturday
+#     - people: '6'
+#   - action: utter_booking-nobook
+#   - action: utter_booking-request-stay
+#   - action: utter_booking-request-day
+#   - intent: hotel-inform
+#     entities:
+#     - stay: '2'
+#   - action: utter_general-reqmore
+#   - action: utter_booking-book
+#   - intent: general-bye
+#   - action: utter_general-bye
+
+# - story: path nr 52
+#   steps:
+#   - intent: hotel-inform
+#     entities:
+#     - name: leverton house
+#   - action: action_hotel-inform
+#   - action: utter_general-reqmore
+#   - intent: hotel-inform
+#     entities:
+#     - stay: '4'
+#   - intent: hotel-request-ref
+#   - action: utter_booking-book
+#   - intent: attraction-inform
+#     entities:
+#     - area: south
+#   - action: action_attraction-select
+#   - action: action_attraction-inform
+#   - intent: attraction-inform
+#     entities:
+#     - type: cinema
+#   - action: utter_general-reqmore
+#   - action: action_attraction-inform
+#   - intent: attraction-request-fee
+#   - action: action_attraction-inform
+#   - intent: general-thank
+#   - action: utter_general-bye
+#   - action: utter_general-welcome
+#   - intent: general-thank
+#   - action: utter_general-bye
+#   - action: utter_general-welcome
+
+# - story: path nr 53
+#   steps:
+#   - intent: hotel-inform
+#     entities:
+#     - price: expensive
+#     - internet: yes
+#   - action: action_booking-inform
+#   - action: action_hotel-inform
+#   - intent: hotel-inform
+#     entities:
+#     - type: guesthouse
+#   - action: utter_hotel-nooffer
+#   - action: utter_general-reqmore
+#   - action: utter_hotel-request-area
+#   - intent: hotel-inform
+#     entities:
+#     - area: east
+#   - action: action_booking-inform
+#   - action: action_hotel-inform
+#   - intent: hotel-inform
+#     entities:
+#     - stay: '2'
+#   - action: utter_booking-request-people
+#   - intent: hotel-inform
+#     entities:
+#     - people: '3'
+#   - action: utter_booking-book
+#   - intent: attraction-inform
+#     entities:
+#     - type: architecture
+#   - action: utter_general-reqmore
+#   - action: action_attraction-inform
+#   - intent: attraction-request-post
+#   - intent: attraction-inform
+#     entities:
+#     - name: holy trinity church
+#   - action: action_attraction-inform
+#   - intent: general-thank
+#   - action: utter_general-bye
+
+# - story: path nr 58
+#   steps:
+#   - intent: hotel-inform
+#     entities:
+#     - area: north
+#     - stars: '4'
+#   - action: utter_hotel-request-parking
+#   - action: action_hotel-inform
+#   - intent: hotel-inform
+#     entities:
+#     - internet: yes
+#   - action: action_hotel-recommend
+#   - intent: hotel-inform
+#     entities:
+#     - none: none
+#   - action: action_hotel-inform
+#   - intent: hotel-inform
+#     entities:
+#     - internet: yes
+#   - action: action_booking-inform
+#   - action: action_hotel-inform
+#   - intent: hotel-inform
+#     entities:
+#     - stay: '4'
+#   - action: utter_general-reqmore
+#   - action: utter_booking-book
+#   - intent: general-thank
+#   - action: utter_general-bye
+
+# - story: path nr 60
+#   steps:
+#   - intent: hotel-inform
+#     entities:
+#     - name: the cambridge belfry
+#   - action: action_hotel-inform
+#   - intent: general-thank
+#   - action: utter_booking-request-day
+#   - action: utter_booking-request-time
+#   - intent: hotel-inform
+#     entities:
+#     - stay: '2'
+#     - day: saturday
+#     - people: '4'
+#   - action: utter_general-reqmore
+#   - action: utter_booking-book
+#   - intent: general-thank
+#   - action: utter_general-bye
+
+# - story: path nr 68
+#   steps:
+#   - intent: hotel-inform
+#     entities:
+#     - price: moderate
+#     - internet: yes
+#   - intent: train-request-ticket
+#   - action: action_hotel-inform
+#   - intent: hotel-inform
+#     entities:
+#     - name: acorn guest house
+#   - action: action_booking-inform
+#   - action: action_hotel-inform
+#   - intent: hotel-inform
+#     entities:
+#     - area: south
+#     - stars: '4'
+#   - action: action_hotel-inform
+#   - action: utter_booking-request-people
+#   - action: utter_booking-request-stay
+#   - action: utter_booking-request-day
+#   - intent: hotel-inform
+#     entities:
+#     - stay: '2'
+#     - day: sunday
+#     - people: '4'
+#   - action: utter_booking-book
+#   - intent: general-thank
+#   - action: utter_general-bye
+
+# - story: path nr 70
+#   steps:
+#   - intent: hotel-inform
+#     entities:
+#     - internet: yes
+#     - stars: '3'
+#   - action: utter_hotel-request-area
+#   - action: utter_hotel-request-price
+#   - action: action_hotel-inform
+#   - intent: hotel-inform
+#     entities:
+#     - type: hotel
+#   - action: action_hotel-select
+#   - action: action_hotel-inform
+#   - intent: hotel-inform
+#     entities:
+#     - stay: '2'
+#     - day: monday
+#     - people: '3'
+#   - intent: hotel-request-ref
+#   - action: action_hotel-inform
+#   - action: utter_booking-book
+#   - intent: general-bye
+#   - action: utter_general-bye
+
+# - story: path nr 74
+#   steps:
+#   - intent: hotel-inform
+#     entities:
+#     - type: hotel
+#   - action: utter_hotel-request-type
+#   - action: action_hotel-inform
+#   - intent: hotel-inform
+#     entities:
+#     - type: hotel
+#     - price: moderate
+#     - internet: yes
+#   - action: action_hotel-inform
+#   - action: action_booking-inform
+#   - action: utter_general-reqmore
+#   - intent: hotel-inform
+#     entities:
+#     - type: hotel
+#   - action: action_hotel-inform
+#   - intent: hotel-inform
+#     entities:
+#     - type: hotel
+#   - intent: hotel-inform
+#     entities:
+#     - type: hotel
+#   - action: action_taxi-inform
+#   - action: utter_general-reqmore
+#   - intent: general-thank
+#   - action: utter_general-bye

@@ -1,0 +1,74 @@
+version: "3.1"
+
+rules:
+
+# Common rules
+- rule: Say Hi anytime the user says Hi
+  steps:
+  - intent: greet
+  - action: utter_greet
+
+- rule: Say goodbye anytime the user says goodbye
+  steps:
+  - intent: general-bye
+  - action: utter_goodbye
+
+- rule: Say 'hello_world' when user asks
+  steps:
+  - intent: hello_world
+  - action: action_hello_world
+
+# Form actions
+- rule: Activate Flight Form
+  steps: 
+  - intent: flight
+  - action: simple_flight_form
+  - active_loop: simple_flight_form
+- rule: Submit Flight Form
+  condition:
+  - active_loop: simple_flight_form
+  steps:
+  - action: simple_flight_form
+  - active_loop: null
+  - slot_was_set:
+    - requested_slot: null 
+  - action: action_query_flight_info 
+
+- rule: Activate weather form
+  steps:
+  - intent: weather
+  - action: simple_weather_form
+  - active_loop: simple_weather_form
+
+- rule: Submit weather form
+  condition:
+  - active_loop: simple_weather_form
+  steps:
+  - action: simple_weather_form
+  - active_loop: null
+  - slot_was_set:
+    - requested_slot: null
+  - action: action_query_weather_info 
+
+- rule: Activate hotel form
+  steps:
+  - intent: hotel-inform
+  - action: simple_hotel_form
+  - active_loop: simple_hotel_form
+
+- rule: Submit hotel form
+  condition:
+  - active_loop: simple_hotel_form
+  steps:
+  - action: simple_hotel_form
+  - active_loop: null
+  - slot_was_set:
+    - requested_slot: null
+  - action: action_query_hotel_info
+
+# fallback
+- rule: use openAI response for fallbacked requests
+  steps:
+    - intent: nlu_fallback
+    - action: action_custom_fallback
+
