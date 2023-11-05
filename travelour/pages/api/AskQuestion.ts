@@ -20,13 +20,6 @@ export default async function handler(
     return;
   }
 
-  if(!prompt){
-    res.status(400).json({
-        ans: "Please enter a valid prompt!"
-    });
-    return;
-  }
-
   let response = await query(prompt, chatId, model)
   const msg: Message = {
     text: response || "Travelour has yet to provide this functionality",
@@ -34,7 +27,7 @@ export default async function handler(
     user: {
         _id: 'Travelour',
         name: 'Travelour',
-        avatar: 'https://www.linkpicture.com/q/imageedit_2_6123759516.png',
+        avatar: 'https://i.ytimg.com/vi/F_26_Xr5J-0/maxresdefault.jpg',
     },
   };
   await dbb.collection('users').doc(session?.user?.email).collection("chats").doc(chatId).collection("messages").add(msg);
