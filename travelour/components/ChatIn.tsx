@@ -36,6 +36,7 @@ function ChatIn({chatId}: Props) {
 
         const notifs = toast.loading('Travelour is processing information');
 
+
         // notif (calling the API using json) we will just stick with the davinci model for our spcific call to chatGPT
         await fetch('/api/AskQuestion', {
             method: 'POST',
