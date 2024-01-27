@@ -2,6 +2,8 @@
 
 Travelour is an innovative travel planning application built with a modern tech stack, including Next.js, Tailwind CSS, and Firebase. At its core, Travelour offers a unique user experience by utilizing Rasa for intent classification and integrating OpenAI's powerful GPT models for processing unclassified intents. With NextAuth for authentication and Firebase for data management, Travelour provides a seamless and secure platform for all your travel planning needs.
 
+https://travelour.vercel.app/
+
 ## Features
 
 - **Intuitive Travel Planning**: Plan your trips with ease, leveraging a user-friendly interface.
