@@ -1,23 +1,41 @@
-# Travel Planner App
+# Travelour
 
-The Travel Planner App is a web application built with Next.js, deployed on Vercel, and utilizing various technologies and APIs to provide a comprehensive travel planning experience. The app incorporates NextAuth for authentication, Google Firebase as the database, a machine learning model for intent classification using RASA, and integration with the OpenAI API for natural language processing.
+Travelour is an innovative travel planning application built with a modern tech stack, including Next.js, Tailwind CSS, and Firebase. At its core, Travelour offers a unique user experience by utilizing Rasa for intent classification and integrating OpenAI's powerful GPT models for processing unclassified intents. With NextAuth for authentication and Firebase for data management, Travelour provides a seamless and secure platform for all your travel planning needs.
 
 ## Features
 
-- User Authentication: Users can sign up, log in, and manage their travel plans.
-- Travel Planning: Users can create, view, update, and delete their travel plans, including destinations, dates, activities, and notes.
-- Intent Classification: The app uses a machine learning model trained with RASA for intent classification to understand user input and provide relevant suggestions.
-- Natural Language Processing: The OpenAI API is integrated to perform natural language processing tasks, such as sentiment analysis and language translation.
+- **Intuitive Travel Planning**: Plan your trips with ease, leveraging a user-friendly interface.
+- **Rasa Intent Classification**: Advanced intent recognition to understand various travel queries and requirements.
+- **OpenAI Integration**: Utilizes OpenAI API for processing complex, unclassified user intents, ensuring no query goes unanswered.
+- **NextAuth Authentication**: Secure user authentication and session management.
+- **Firebase Backend**: Robust backend support for storing and managing user data and preferences.
+- **Responsive Design**: Crafted with Tailwind CSS, the application is fully responsive and provides a consistent experience across all devices.
 
-## Technologies Used
+## Getting Started
 
-- Next.js
-- Vercel
-- NextAuth
-- Google Firebase
-- RASA
-- OpenAI API
+To get started with Travelour, follow these steps:
 
-### Installation
-https://travelour.vercel.app/
+1. **Clone the Repository**
+   ```bash
+   git clone https://github.com/your-username/travelour.git
+   cd travelour
+
+
+2. **install dependencies**
+    ```bash
+    npm install
+
+3. **Set up environment variables**
+    ```bash
+    NEXT_PUBLIC_FIREBASE_API_KEY=your_firebase_api_key
+    NEXT_PUBLIC_OPENAI_API_KEY=your_openai_api_key
+
+4. **Run dev server**
+    ```bash
+    npm run dev
+
+
+# Video Demonstration
+![fire](travel.gif)
+![fi](fire.gif)
 
